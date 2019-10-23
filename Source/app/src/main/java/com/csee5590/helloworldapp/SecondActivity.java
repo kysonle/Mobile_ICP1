@@ -26,6 +26,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
     }
+    // redirect from home screen to login screen
     public void LogOut(View view){
         Intent redirect = new Intent(SecondActivity.this, MainActivity.class);
         startActivity(redirect);

@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         String password = passwordCtrl.getText().toString();
 
         boolean validationFlag = false;
+        // check username and password if it is empty
         if(!userName.isEmpty() && !password.isEmpty()) {
             if(userName.equals("Le") && password.equals("Admin")) {
                 validationFlag = true;
@@ -29,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
         }
         if(!validationFlag)
         {
+            // display error notice message if the username or password are wrong
             errorCtrl.setVisibility(View.VISIBLE);
         }
         else
         {
+            // redirect from login screen to home screen
             Intent redirect = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(redirect);
         }
