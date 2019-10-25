@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
             errorCtrl.setVisibility(View.VISIBLE);
         }
         else {
-            // redirect from login screen to home screen
-            Intent redirect = new Intent(MainActivity.this, SecondActivity.class);
-            startActivity(redirect);
+            // direct from login screen to home screen
+            Intent direct = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(direct);
         }
     }
 }
