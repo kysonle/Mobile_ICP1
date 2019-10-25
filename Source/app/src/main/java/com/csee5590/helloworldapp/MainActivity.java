@@ -14,27 +14,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void Login(View view){
+    public void Login(View view) {
         EditText usernameCtrl = (EditText)findViewById(R.id.etName);
         EditText passwordCtrl = (EditText) findViewById(R.id.etPassword);
         TextView errorCtrl = (TextView)findViewById(R.id.lblError);
         String userName = usernameCtrl.getText().toString();
         String password = passwordCtrl.getText().toString();
 
+
         boolean validationFlag = false;
-        // check username and password if it is empty
+
+
+        // verify if username and password are not empty
         if(!userName.isEmpty() && !password.isEmpty()) {
             if(userName.equals("Le") && password.equals("Admin")) {
                 validationFlag = true;
             }
         }
-        if(!validationFlag)
-        {
+        if(!validationFlag) {
             // display error notice message if the username or password are wrong
             errorCtrl.setVisibility(View.VISIBLE);
         }
-        else
-        {
+        else {
             // redirect from login screen to home screen
             Intent redirect = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(redirect);
