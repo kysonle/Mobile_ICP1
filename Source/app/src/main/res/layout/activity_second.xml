@@ -73,6 +73,13 @@
             android:background="@drawable/ic_launcher_foreground"
             android:clickable="false" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="318dp"
+            android:layout_height="302dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/android" />
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
